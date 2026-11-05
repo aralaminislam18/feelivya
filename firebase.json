@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": ".",
+    "cleanUrls": false,
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "*.zip", "_redirects", "firebase-rules-snippet.json"],
+    "rewrites": [
+      { "source": "/post/**", "destination": "/post/index.html" }
+    ],
+    "headers": [
+      { "source": "/.well-known/assetlinks.json", "headers": [{ "key": "Content-Type", "value": "application/json" }] }
+    ]
+  }
+}

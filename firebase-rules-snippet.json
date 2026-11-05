@@ -1,0 +1,23 @@
+{
+  "_comment": "Merge these three nodes into your existing Realtime Database rules (inside the top-level \"rules\" object) of the MAIN database (meetlity-3be01). Keep your other rules as they are.",
+  "counters": {
+    "postNumber": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".validate": "newData.isNumber() && (data.exists() ? newData.val() == data.val() + 1 : newData.val() == 100001)"
+    }
+  },
+  "shareLinks": {
+    "$key": {
+      ".read": "auth != null",
+      ".write": "auth != null && !data.exists()"
+    }
+  },
+  "publicPosts": {
+    "$n": {
+      ".read": true,
+      ".write": "auth != null && (data.exists() ? data.child('uid').val() === auth.uid : root.child('users').child(newData.child('uid').val()).child(newData.child('kind').val() === 'reel' ? 'reels' : 'posts').child(newData.child('srcId').val()).exists())",
+      ".validate": "newData.hasChildren(['kind','uid','srcId','mediaType'])"
+    }
+  }
+}
