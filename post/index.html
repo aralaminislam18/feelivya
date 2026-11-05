@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#7560f5">
+<meta name="robots" content="noindex">
+<title>Post — Feelivya</title>
+<meta name="description" content="A post shared from Feelivya. Your world. Your people.">
+<meta property="og:title" content="A post on Feelivya">
+<meta property="og:description" content="Open this post on Feelivya. Your world. Your people.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://feelivya.com/feelivya-icon.png">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/feelivya-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1d1838; --ink-2:#4b4668; --muted:#7a7596; --line:#e8e4f6;
+  --paper:#ffffff; --soft:#f8f6ff; --lilac:#ece7ff; --lilac-2:#d9d0ff;
+  --purple:#7560f5; --purple-2:#5e49d8; --yellow:#f7d94b;
+  --grad:linear-gradient(135deg,#8b7bff,#6650e5);
+  --shadow:0 18px 50px -22px rgba(60,40,140,.35);
+  --font:"DM Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI","Noto Sans Bengali",Roboto,sans-serif;
+  --font-d:Manrope,"DM Sans",ui-sans-serif,system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);color:var(--ink);background:var(--soft);line-height:1.6;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,video:focus-visible{outline:3px solid var(--lilac-2);outline-offset:3px;border-radius:10px}
+.bar{background:rgba(255,255,255,.9);border-bottom:1px solid var(--line)}
+.bar .in{width:min(560px,100% - 32px);margin-inline:auto;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-d);font-weight:800;font-size:1.15rem;letter-spacing:-.03em}
+.brand img{width:36px;height:36px;border-radius:11px;object-fit:cover}
+.bar a.site{font-size:14px;font-weight:600;color:var(--ink-2)}
+main{flex:1;width:min(560px,100% - 32px);margin:20px auto 40px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+.head{display:flex;align-items:center;gap:12px;padding:16px}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--lilac);object-fit:cover;flex:none}
+.who{min-width:0}
+.name{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.when{font-size:13px;color:var(--muted)}
+.text{padding:0 16px 16px;white-space:pre-wrap;overflow-wrap:anywhere}
+.media{width:100%;max-height:75vh;background:#17152c;object-fit:contain}
+img.media{background:var(--lilac)}
+.state{padding:56px 20px;text-align:center;color:var(--ink-2)}
+.state strong{display:block;font-family:var(--font-d);font-size:1.15rem;color:var(--ink);margin-bottom:6px}
+.spin{width:30px;height:30px;border-radius:50%;border:3px solid var(--lilac-2);border-top-color:var(--purple);margin:0 auto 14px;animation:s .8s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}}
+.cta{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:20px;text-align:center}
+.cta p{color:var(--ink-2);margin-bottom:14px}
+.btns{display:grid;gap:10px}
+.button{display:block;width:100%;padding:14px 18px;border-radius:999px;font:700 15px var(--font);text-align:center;cursor:pointer;border:0}
+.button-primary{background:var(--grad);color:#fff;box-shadow:0 10px 24px -10px rgba(102,80,229,.7)}
+.button-ghost{background:var(--lilac);color:var(--purple-2)}
+.button[hidden]{display:none}
+footer{padding:0 16px 28px;text-align:center;font-size:13px;color:var(--muted)}
+footer a{color:var(--purple-2);font-weight:600}
+</style>
+</head>
+<body>
+<header class="bar"><div class="in">
+  <a class="brand" href="/" aria-label="Feelivya home"><img src="/feelivya-icon.png" alt="" width="36" height="36"><span>Feelivya</span></a>
+  <a class="site" href="/">feelivya.com</a>
+</div></header>
+
+<main>
+  <article class="card" id="card" aria-live="polite">
+    <div class="state"><div class="spin" aria-hidden="true"></div>Loading post…</div>
+  </article>
+
+  <section class="cta">
+    <p>See more, like and comment in the Feelivya app.</p>
+    <div class="btns">
+      <a class="button button-primary" id="open-app" href="#" hidden>Open in app</a>
+      <button class="button button-ghost" id="get-app" type="button">Get the app</button>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="year">2026</span> Feelivya · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script>
+(function(){
+  /* ===== Only change this if needed ===== */
+  var APP_PACKAGE = "com.meetlity.jr";   /* Android package name; "Open in app" stays hidden until you set it */
+  /* ====================================== */
+
+  firebase.initializeApp({
+    apiKey:"AIzaSyDxyAfXhKN09Fh-5HXdWbyFrKGZfiwJTlo",
+    authDomain:"meetlity-3be01.firebaseapp.com",
+    databaseURL:"https://meetlity-3be01-default-rtdb.firebaseio.com",
+    projectId:"meetlity-3be01",
+    storageBucket:"meetlity-3be01.firebasestorage.app",
+    messagingSenderId:"402099926615",
+    appId:"1:402099926615:web:b87d379595abac063b1512",
+    measurementId:"G-KW7KXZM5CM"
+  });
+  var db = firebase.database();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var card = document.getElementById('card');
+  var parts = location.pathname.split('/').filter(Boolean);
+  var id = decodeURIComponent(parts[parts.length-1] || '');
+  if (id === 'post' || id === 'index.html') id = '';
+
+  function el(tag, cls, text){
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function message(title, body){
+    card.textContent = '';
+    var s = el('div','state');
+    s.appendChild(el('strong',null,title));
+    s.appendChild(document.createTextNode(body));
+    card.appendChild(s);
+  }
+  function safeUrl(u){
+    return (typeof u === 'string' && /^https:\/\//i.test(u)) ? u : '';
+  }
+
+  /* ---- Get the app button: admin sets feelivyaConfig/downloadUrl (same as the home page) ---- */
+  var getBtn = document.getElementById('get-app');
+  var downloadUrl = '';
+  db.ref('feelivyaConfig/downloadUrl').on('value', function(s){
+    downloadUrl = safeUrl(s.val());
+    getBtn.textContent = downloadUrl ? 'Download the app' : 'App coming soon';
+  });
+  getBtn.addEventListener('click', function(){
+    if (downloadUrl) window.location.href = downloadUrl; else window.location.href = '/#early-access';
+  });
+
+  /* ---- Open in app (Android intent link) ---- */
+  var openBtn = document.getElementById('open-app');
+  if (id && APP_PACKAGE.indexOf('YOUR.') !== 0 && /Android/i.test(navigator.userAgent)) {
+    var fallback = encodeURIComponent(location.origin + '/#early-access');
+    openBtn.href = 'intent://feelivya.com/post/' + encodeURIComponent(id) +
+      '#Intent;scheme=https;package=' + APP_PACKAGE + ';S.browser_fallback_url=' + fallback + ';end';
+    openBtn.hidden = false;
+  }
+
+  if (!/^[0-9A-Za-z_-]{1,40}$/.test(id)) {
+    message('Post not found', 'This link doesn\u2019t point to a post.');
+    return;
+  }
+
+  db.ref('publicPosts/' + id).once('value').then(function(snap){
+    var p = snap.val();
+    if (!p) { message('Post not available', 'It may have been deleted or made private.'); return; }
+
+    card.textContent = '';
+
+    var head = el('div','head');
+    var photo = safeUrl(p.userPhoto);
+    if (photo) { var a = el('img','avatar'); a.src = photo; a.alt = ''; a.width = 44; a.height = 44; a.loading = 'lazy'; head.appendChild(a); }
+    else head.appendChild(el('div','avatar'));
+    var who = el('div','who');
+    who.appendChild(el('div','name', p.username || 'Feelivya user'));
+    if (p.timestamp) who.appendChild(el('div','when', new Date(Number(p.timestamp)).toLocaleString()));
+    head.appendChild(who);
+    card.appendChild(head);
+
+    if (p.text) card.appendChild(el('div','text', p.text));
+
+    var url = safeUrl(p.mediaUrl);
+    if (url) {
+      if (p.mediaType === 'video') {
+        var v = el('video','media');
+        v.controls = true; v.playsInline = true; v.preload = 'metadata';
+        var th = safeUrl(p.thumbUrl); if (th) v.poster = th;
+        v.src = url;
+        card.appendChild(v);
+      } else {
+        var im = el('img','media'); im.src = url; im.alt = ''; im.loading = 'lazy';
+        card.appendChild(im);
+      }
+    }
+
+    document.title = (p.username ? p.username + ' on ' : '') + 'Feelivya';
+  }).catch(function(){
+    message('Couldn\u2019t load the post', 'Check your connection and try again.');
+  });
+})();
+</script>
+</body>
+</html>
